@@ -13,9 +13,9 @@ body{
     text-align: center;
     color: white;
     background-color: var(--Dark_Grayish_Blue);
-    
+    /* position: relative; */
 }
-body div{
+.main{
     background-color: var(--Grayish_Blue);
     width: 28rem;
     padding: 1.5rem;
@@ -33,9 +33,9 @@ body div{
     line-height: 1.5;
 }
 .divider{
-    /* background-image: url(/images/pattern-divider-desktop.svg); */
     margin-bottom: 2rem;
-  
+    width: 60%;
+    position: relative;
 }
 button{
     all: unset;
@@ -44,16 +44,35 @@ button{
     border-radius: 50px;
     cursor: pointer;
     position: absolute;
-    bottom: -11%;
-    left: 46%;
-    
+    bottom: -22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s ease-in-out;
 }
 button:hover{
     box-shadow: 0 0 20px var(--Neon_Green);
 }
-@media screen and (max-width:578px) {
-    body div{
-        width: 20rem;
-    }
+button img:hover{
+    transform: scale(1.2);
 
+}
+@media screen and (max-width:578px) {
+    .main{
+        padding: 5rem 2rem;
+        height: 50%;
+        width: 18rem;
+    }
+    .divider{
+        margin-top: 2rem;
+    }
+    .top{
+        font-size: 30px;
+    }
+    .advice{
+        font-size: 25px;
+    }
+    button{
+        bottom: -9%;
+        /* left: 49%; */
+    }
 }
